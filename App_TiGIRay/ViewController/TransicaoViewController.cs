@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using Trabalho_TiGIRay.Repositorio;
 using Trabalho_TiGIRay.ViewModel;
 
@@ -13,12 +14,11 @@ namespace Trabalho_TiGIRay.ViewController {
                 System.Console.WriteLine ("Defina um tipo de Transação");
                 transacoes = ExibirOpcoes ();
 
-                if (string.IsNullOrEmpty(transacoes))
-                {
-                    System.Console.WriteLine("Tipo Inválido");
+                if (string.IsNullOrEmpty (transacoes)) {
+                    System.Console.WriteLine ("Tipo Inválido");
                 }
 
-            } while (string.IsNullOrEmpty(transacoes));
+            } while (string.IsNullOrEmpty (transacoes));
 
             do {
                 System.Console.WriteLine ("Defina uma descrição");
@@ -51,23 +51,22 @@ namespace Trabalho_TiGIRay.ViewController {
             Console.ReadLine ();
         }
         public static void ListarTransacoes () {
-            List<TransicaoViewModel> listaDeTransacao = TransicaoRepositorio.Listar();
+            List<TransicaoViewModel> listaDeTransacao = TransicaoRepositorio.Listar ();
 
-            foreach (var item in listaDeTransacao)
-            {
-                if (item != null)
-                {
+            foreach (var item in listaDeTransacao) {
+                if (item != null) {
                     System.Console.WriteLine ("================================");
-                    System.Console.WriteLine($"TIPO: {item.TiposDeTransacoes}");
-                    System.Console.WriteLine($"DESCRIÇÃO: {item.Descricao}");
-                    System.Console.WriteLine($"VALOR: {item.Valor}");
-                    System.Console.WriteLine($"DATA DE CRIAÇÃO: {item.DataCricao}");
+                    System.Console.WriteLine ($"ID: {item.IdUsuario}");
+                    System.Console.WriteLine ($"TIPO: {item.TiposDeTransacoes}");
+                    System.Console.WriteLine ($"DESCRIÇÃO: {item.Descricao}");
+                    System.Console.WriteLine ($"VALOR: R${item.Valor}");
+                    System.Console.WriteLine ($"DATA DE CRIAÇÃO: {item.DataCricao}");
                     System.Console.WriteLine ("================================");
                 }
 
-                System.Console.WriteLine("Aperte ENTER para voltar para o menu");
-                Console.ReadLine();
-                
+                System.Console.WriteLine ("Aperte ENTER para voltar para o menu");
+                Console.ReadLine ();
+
             }
         }
 
@@ -102,6 +101,38 @@ namespace Trabalho_TiGIRay.ViewController {
             } while (opcaoNaoEscolhida);
             return opcao;
         }
+
+        public static void ExibirSaldo (UsuarioViewModel usuario) {
+            List<TransicaoViewModel> listaDeTransacao = TransicaoRepositorio.Listar ();
+
+            float receita = 0;
+            float despesa = 0;
+
+            float saldo = 0;
+            foreach (var item in listaDeTransacao) {
+                if (item != null && usuario.Id.Equals (item.IdUsuario)) {
+                    System.Console.WriteLine ("================================");
+                    System.Console.WriteLine ($"{item.TiposDeTransacoes}");
+                    System.Console.WriteLine ($"R${item.Valor}");
+                    System.Console.WriteLine ($"{item.Descricao}");
+                    System.Console.WriteLine ($"{item.DataCricao}");
+                    System.Console.WriteLine ("================================");
+
+                    if (item.TiposDeTransacoes.Equals ("Receita")) {
+                        receita += item.Valor;
+                    } else {
+                        despesa += item.Valor;
+                    }
+
+                    saldo = receita - despesa;
+
+                }
+            }
+            System.Console.WriteLine ($"Seu saldo é: R${saldo}");
+            Console.ReadLine ();
+        }
+
+       
 
     }
 }

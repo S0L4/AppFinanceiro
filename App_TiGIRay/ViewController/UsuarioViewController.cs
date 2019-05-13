@@ -75,6 +75,7 @@ namespace Trabalho_TiGIRay.ViewController {
 
             if (usuarioRecuperado != null) {
                 return usuarioRecuperado;
+                
             }
             System.Console.WriteLine("Usuário não encontrado");
             return null;

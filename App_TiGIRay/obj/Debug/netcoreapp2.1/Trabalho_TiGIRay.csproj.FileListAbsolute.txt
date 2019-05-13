@@ -9,3 +9,14 @@ C:\Users\46309932829\Documents\Projetos\SENAI\Trabalho_TiGIRay\obj\Debug\netcore
 C:\Users\46309932829\Documents\Projetos\SENAI\Trabalho_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.AssemblyInfo.cs
 C:\Users\46309932829\Documents\Projetos\SENAI\Trabalho_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.dll
 C:\Users\46309932829\Documents\Projetos\SENAI\Trabalho_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.pdb
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\bin\Debug\netcoreapp2.1\Trabalho_TiGIRay.deps.json
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\bin\Debug\netcoreapp2.1\Trabalho_TiGIRay.runtimeconfig.json
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\bin\Debug\netcoreapp2.1\Trabalho_TiGIRay.runtimeconfig.dev.json
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\bin\Debug\netcoreapp2.1\Trabalho_TiGIRay.dll
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\bin\Debug\netcoreapp2.1\Trabalho_TiGIRay.pdb
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.csprojAssemblyReference.cache
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.csproj.CoreCompileInputs.cache
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.AssemblyInfoInputs.cache
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.AssemblyInfo.cs
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.dll
+C:\Users\46309932829\Documents\Projetos\SENAI\AppFinanceiro\App_TiGIRay\obj\Debug\netcoreapp2.1\Trabalho_TiGIRay.pdb

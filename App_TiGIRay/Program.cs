@@ -1,4 +1,5 @@
 ﻿using System;
+using Trabalho_TiGIRay.Repositorio;
 using Trabalho_TiGIRay.Utils;
 using Trabalho_TiGIRay.ViewController;
 
@@ -20,7 +21,7 @@ namespace Trabalho_TiGIRay {
 
                     case 2:
                         // Efetuar login
-                        UsuarioViewController.EfetuarLogin ();
+                        var usuarioLogado = UsuarioViewController.EfetuarLogin ();
                         do {
                             MenuUtils.MenuLogado ();
                             opcaoLogado = int.Parse (Console.ReadLine ());
@@ -28,16 +29,31 @@ namespace Trabalho_TiGIRay {
                             switch (opcaoLogado) {
 
                                 case 1:
-                                    //Cadastrar Transiçoes
-                                    TransicaoViewController.CadastrarTransicao();
+                                    // Cadastrar Transiçoes
+                                    TransicaoViewController.CadastrarTransicao ();
                                     break;
 
                                 case 2:
-                                    //Listar
-                                    TransicaoViewController.ListarTransacoes();
+                                    // Listar
+                                    TransicaoViewController.ListarTransacoes ();
+                                    break;
+
+                                case 3:
+                                    // Exibir saldo
+                                    TransicaoViewController.ExibirSaldo (usuarioLogado);
+                                    break;
+
+                                case 4:
+                                    // Exibir relatório no world
+                                    TransicaoRepositorio.CriarArquivo();
+                                    break;
+
+                                case 0:
+                                    // Sair
                                     break;
                                 default:
-                                break;
+                                    System.Console.WriteLine ("Valor inválido!");
+                                    break;
                             }
                         } while (opcaoLogado != 0);
 

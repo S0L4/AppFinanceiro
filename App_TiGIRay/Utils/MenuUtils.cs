@@ -32,7 +32,8 @@ namespace Trabalho_TiGIRay.Utils {
             System.Console.WriteLine (barraMenu);
             System.Console.WriteLine (" || (1) Cadastrar Transações  || ");
             System.Console.WriteLine (" || (2) Listar Trasaçôes      || ");
-            System.Console.WriteLine (" || (3) Relatório no Word     || ");
+            System.Console.WriteLine (" || (3) Exibir o saldo        || ");
+            System.Console.WriteLine (" || (4) Relatório no Word     || ");
             System.Console.WriteLine (" || (0) Sair                  || ");
             System.Console.WriteLine (barraMenu);
             System.Console.WriteLine (" ||   Escolha uma opção       || ");
